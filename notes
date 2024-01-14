@@ -1,0 +1,12 @@
+create virtual environmen
+install django
+instal mysql
+install connector
+pip install mysql-connector-python (this will work)
+or
+pip install mysql-connector (it will not work)
+create project
+creat app
+open git bash and touch command
+now mydb.py
+
