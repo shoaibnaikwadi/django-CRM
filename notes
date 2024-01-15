@@ -10,3 +10,9 @@ creat app
 open git bash and touch command
 now mydb.py
 
+create database
+
+create super user
+winpty python manage.py createsuperuser
+
+

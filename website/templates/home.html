@@ -1,0 +1,36 @@
+{% extends 'base.html'%}
+
+{% block content %}
+
+<div class="col-md-6 offset-md-3"
+{% if user.is_authenticated %}      
+
+<!-- if user is logged in it will not show login form -->
+<h1>hello world</h1>
+{% else %}
+<h1> login </h1>
+<form method="POST" action="{% url 'home' %}">
+    {% csrf_token %}
+</br>
+
+    <form>
+        <div class="mb-3">
+          <input type="text" class="form-control" name="username" placeholder="Username or Email address." required >
+        </div>
+    </br>
+        <div class="mb-3">
+          <input type="password" class="form-control" name ="password" placeholder="password" required>  
+        </div>
+        <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1" required>
+          <label class="form-check-label" for="exampleCheck1">I agree to the terms and condiions. </label>
+        </div>
+        <button type="submit" class="btn btn-secondary">Login</button>
+      </form>
+{% endif %}
+
+
+</form>
+
+</div>
+{% endblock %}
